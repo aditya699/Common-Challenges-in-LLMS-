@@ -1,23 +1,25 @@
-# Common Challenges in LLMs
+# Behavior in LLMs
 
-This repository documents common challenges and solutions when working with Large Language Models (LLMs). Each section provides detailed insights, practical approaches, and best practices for addressing specific challenges.
+This folder explores how to add specific behaviors to Large Language Models (LLMs) without changing their underlying intelligence.
 
-## Table of Contents
+## Contents
 
-1. [Behavior in LLMs](./behavior_in_llms.md)
-   - Understanding behavior vs. intelligence
-   - When prompting falls short
-   - Methods to add behavior (SFT, DPO, LoRA)
-   - Implementation guidelines and resources
+- **behavior_in_llms.md**: Overview of behavior alignment techniques, explaining the difference between behavior and intelligence in LLMs, when prompt engineering falls short, and methods like SFT, DPO, and LoRA.
 
-## Contributing
+- **unsloth_guide.ipynb**: Practical implementation of behavior alignment using the Unsloth library to fine-tune Qwen2.5 7B with LoRA, creating a CBT (Cognitive Behavioral Therapy) coach. This notebook demonstrates how to:
+  - Set up the environment
+  - Prepare a dataset of CBT-style interactions
+  - Configure LoRA parameters
+  - Train the model efficiently
+  - Compare base model vs. fine-tuned model responses
 
-Feel free to contribute by:
-- Adding new challenges and solutions
-- Improving existing documentation
-- Sharing practical examples
-- Suggesting better approaches
+## Key Takeaways
 
-## License
+- Behavior tuning is about reliability and consistency, not intelligence
+- Fine-tuning with LoRA allows efficient behavior alignment on consumer hardware
+- Small, high-quality datasets (50-100 examples) can significantly change model behavior
+- The techniques shown work across various LLM applications beyond therapy
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Getting Started
+
+Open the Jupyter notebook to see a complete walkthrough of the behavior alignment process using Unsloth.
