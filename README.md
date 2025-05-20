@@ -6,8 +6,9 @@ This repository explores common challenges in working with Large Language Models
 
 | Challenge | Description | Solution |
 |-----------|-------------|----------|
-| **Behavior Alignment** | Adding specific behaviors to LLMs without changing their underlying intelligence | Fine-tuning with techniques like LoRA, SFT, and DPO |
+| **Behavior Alignment** | Adding specific behaviors to LLMs without changing their underlying intelligence | Fine-tuning with techniques like LoRA, SFT, DPO and GRPO |
 | **Parallel Processing** | Efficiently handling multiple LLM API calls and computations | ThreadPoolExecutor for IO-bound tasks, ProcessPoolExecutor for CPU-bound tasks |
+| **MCP** | Standardized interface for AI agents to dynamically discover, select, and orchestrate tools based on context |
 
 ## Behavior in LLMs
 
