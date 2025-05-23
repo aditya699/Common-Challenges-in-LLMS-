@@ -1,37 +1,52 @@
-# Common Challenges in LLMs
+# Common Challenges in Large Language Models (LLMs)
 
-This repository explores common challenges in working with Large Language Models (LLMs) and provides practical solutions.
+This repository explores common challenges encountered when working with Large Language Models (LLMs) and provides practical, production-ready solutions for each challenge.
 
-## Challenges
+## Overview
 
-| Challenge | Description | Solution |
-|-----------|-------------|----------|
-| **Behavior Alignment** | Adding specific behaviors to LLMs without changing their underlying intelligence | Fine-tuning with techniques like LoRA, SFT, DPO and GRPO |
-| **Parallel Processing** | Efficiently handling multiple LLM API calls and computations | ThreadPoolExecutor for IO-bound tasks, ProcessPoolExecutor for CPU-bound tasks |
-| **MCP** | Standardized interface for AI agents to dynamically discover, select, and orchestrate tools based on context | Setup an mcp client and mcp server to orchestrate tools |
-| **Router Agent** | Router agent routes user queries to appropriate specialized agents based on query content, optimizing compute resource allocation | Implement a routing layer that analyzes queries and directs them to specialized agents with appropriate compute resources |
-## Behavior in LLMs
+Working with LLMs in production environments presents unique challenges that require specialized approaches. This repository addresses five critical areas where developers commonly encounter difficulties and provides concrete implementations to overcome them.
 
-The `behavior_in_llms` folder explores how to add specific behaviors to Large Language Models (LLMs) without changing their underlying intelligence.
+## Challenges & Solutions
 
-### Contents
+### 🎯 Behavior Alignment
+**Challenge:** Adding specific behaviors and capabilities to LLMs without compromising their underlying intelligence or requiring complete model retraining.
 
-- **behavior_in_llms.md**: Overview of behavior alignment techniques, explaining the difference between behavior and intelligence in LLMs, when prompt engineering falls short, and methods like SFT, DPO, and LoRA.
+**Solution:** Implement fine-tuning techniques including:
+- **LoRA (Low-Rank Adaptation)**: Parameter-efficient fine-tuning
+- **SFT (Supervised Fine-Tuning)**: Task-specific behavior training
+- **DPO (Direct Preference Optimization)**: Alignment without reinforcement learning
+- **GRPO (Group Relative Policy Optimization)**: Advanced preference optimization
 
-- **unsloth_guide.ipynb**: Practical implementation of behavior alignment using the Unsloth library to fine-tune Qwen2.5 7B with LoRA, creating a CBT (Cognitive Behavioral Therapy) coach. This notebook demonstrates how to:
-  - Set up the environment
-  - Prepare a dataset of CBT-style interactions
-  - Configure LoRA parameters
-  - Train the model efficiently
-  - Compare base model vs. fine-tuned model responses
+### ⚡ Parallel Processing
+**Challenge:** Efficiently handling multiple concurrent LLM API calls and computations while managing rate limits and resource constraints.
 
-### Key Takeaways
+**Solution:** Implement asynchronous processing patterns:
+- **ThreadPoolExecutor**: For I/O-bound tasks (API calls, file operations)
+- **ProcessPoolExecutor**: For CPU-bound tasks (data processing, computations)
+- **AsyncIO**: For managing concurrent operations and rate limiting
 
-- Behavior tuning is about reliability and consistency, not intelligence
-- Fine-tuning with LoRA allows efficient behavior alignment on consumer hardware
-- Small, high-quality datasets (50-100 examples) can significantly change model behavior
-- The techniques shown work across various LLM applications beyond therapy
+### 🔧 Model Control Protocol (MCP)
+**Challenge:** Creating a standardized interface for AI agents to dynamically discover, select, and orchestrate tools based on context and requirements.
 
-### Getting Started
+**Solution:** Implement MCP architecture:
+- **MCP Client**: Manages tool discovery and selection
+- **MCP Server**: Provides standardized tool interfaces
+- **Dynamic Orchestration**: Context-aware tool selection and execution
 
-Open the Jupyter notebook to see a complete walkthrough of the behavior alignment process using Unsloth.
+### 🚦 Router Agent
+**Challenge:** Efficiently routing user queries to appropriate specialized agents based on query content, complexity, and resource requirements.
+
+**Solution:** Implement intelligent routing system:
+- **Query Classification**: Analyze and categorize incoming requests
+- **Agent Specialization**: Route to domain-specific agents
+- **Resource Optimization**: Balance compute allocation across agents
+- **Fallback Mechanisms**: Handle edge cases and routing failures
+
+### 🔒 Sandbox Code Execution
+**Challenge:** Securely executing LLM-generated code in an isolated environment while maintaining performance and preventing security vulnerabilities.
+
+**Solution:** Implement containerized execution environment:
+- **Docker Sandboxing**: Isolated execution containers
+- **Resource Limits**: CPU and memory constraints
+- **Security Policies**: Restricted file system and network access
+- **Timeout Management**: Prevent infinite loops and resource exhaustion
