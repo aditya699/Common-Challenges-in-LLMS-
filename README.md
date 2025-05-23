@@ -8,9 +8,8 @@ This repository explores common challenges in working with Large Language Models
 |-----------|-------------|----------|
 | **Behavior Alignment** | Adding specific behaviors to LLMs without changing their underlying intelligence | Fine-tuning with techniques like LoRA, SFT, DPO and GRPO |
 | **Parallel Processing** | Efficiently handling multiple LLM API calls and computations | ThreadPoolExecutor for IO-bound tasks, ProcessPoolExecutor for CPU-bound tasks |
-| **MCP** | Standardized interface for AI agents to dynamically discover, select, and orchestrate tools based on context |Setup an mcp client and mcp server to orchestrate tools |
-|**Router Agent**|Router agent is a tool that can route the user's query to the appropriate agent based on the user's query, agent is just another llm with a 
-bunch of instructions and tools yes but compute is different and it can be a bottleneck.So we can use router agent to route the user's query to the appropriate agent based on the user's query and decide the compute resources to be used.
+| **MCP** | Standardized interface for AI agents to dynamically discover, select, and orchestrate tools based on context | Setup an mcp client and mcp server to orchestrate tools |
+| **Router Agent** | Router agent routes user queries to appropriate specialized agents based on query content, optimizing compute resource allocation | Implement a routing layer that analyzes queries and directs them to specialized agents with appropriate compute resources |
 ## Behavior in LLMs
 
 The `behavior_in_llms` folder explores how to add specific behaviors to Large Language Models (LLMs) without changing their underlying intelligence.
