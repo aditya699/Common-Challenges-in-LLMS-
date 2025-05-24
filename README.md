@@ -4,7 +4,7 @@ This repository explores common challenges encountered when working with Large L
 
 ## Overview
 
-Working with LLMs in production environments presents unique challenges that require specialized approaches. This repository addresses five critical areas where developers commonly encounter difficulties and provides concrete implementations to overcome them.
+Working with LLMs in production environments presents unique challenges that require specialized approaches. This repository addresses six critical areas where developers commonly encounter difficulties and provides concrete implementations to overcome them.
 
 ## Challenges & Solutions
 
@@ -50,3 +50,13 @@ Working with LLMs in production environments presents unique challenges that req
 - **Resource Limits**: CPU and memory constraints
 - **Security Policies**: Restricted file system and network access
 - **Timeout Management**: Prevent infinite loops and resource exhaustion
+
+### 📦 OpenAI Container Infrastructure
+**Challenge:** Setting up and managing complex infrastructure for code execution, data analysis, and file processing while maintaining scalability and reducing deployment overhead.
+
+**Solution:** Leverage OpenAI's managed container infrastructure:
+- **Container Management**: Automatic provisioning and lifecycle management
+- **File Upload/Processing**: Seamless data transfer and analysis capabilities
+- **Code Interpreter Integration**: Direct execution environment for LLM-generated code
+- **Resource Optimization**: Managed scaling and resource allocation
+- **Zero Infrastructure Setup**: Eliminate Docker, Kubernetes, and server management overhead
