@@ -1,6 +1,6 @@
 '''
 NOTE: This is a demo on how to use openai container to analyze a csv file.
-(Rather than analyze the demo is more towards how to use openai container to do anything i mean run python code and stuff)
+(Rather than analyze the data, the demo is more towards how to use openai container to do anything i mean run python code and stuff)
 '''
 
 
