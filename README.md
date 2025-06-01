@@ -73,4 +73,20 @@ Working with LLMs in production environments presents unique challenges that req
 - **Schema-Aware Processing**: Maintain awareness of graph structure (nodes, relationships, properties)
 - **Contextual Understanding**: Preserve semantic meaning while working with structured data
 
+### 📊 Synthetic Data Generator
+**Challenge:** Generating high-quality synthetic data for training and testing financial sentiment analysis models while maintaining data diversity and realism.
+
+**Solution:** Implement a synthetic data generation pipeline:
+- **GPT-4.1 Integration**: Leverage advanced language models for data generation
+- **Multi-class Generation**: Create balanced datasets for positive, negative, and neutral sentiments
+- **Financial Domain Focus**: Generate domain-specific financial text data
+- **Data Validation**: Ensure quality and consistency of generated data
+- **Easy Integration**: Simple CSV output format for immediate use in training pipelines
+
+The synthetic data generator is located in the `synthetic_data_generator` directory and includes:
+- `syndata.py`: Main data generation script
+- `data_analysis.ipynb`: Jupyter notebook for data analysis and combination
+- Sample sentiment files for reference
+- Generated synthetic datasets in CSV format
+
 
